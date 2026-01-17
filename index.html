@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Animation-cards</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background: url(./media/beach.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Plage</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+            <div class="item" style="background: url(./media/star.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Ciel étoilé</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+            <div class="item" style="background: url(./media/winter.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Hiver</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+            <div class="item" style="background: url(./media/waouh.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Paysage</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+            <div class="item" style="background: url(./media/mountain.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Montagnes</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+            <div class="item" style="background: url(./media/ice.jpg) center/cover ;">
+                <div class="content">
+                    <div class="name">Hiver glacial</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, perferendis.</div>
+                    <button class="more">Explorer plus</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="prev">&#10096;</button>
+            <button class="next">&#10097;</button>
+        </div>
+    </div>
+<script>
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    next.addEventListener('click', () => {
+        let items = document.querySelectorAll(".item");
+        document.querySelector('.slide').appendChild(items[0]);
+    });
+
+    prev.addEventListener("click",  () => {
+        let items = document.querySelectorAll(".item");
+        document.querySelector('.slide').prepend(items[items.length - 1]);
+    })
+</script>
+</body>
+</html>
